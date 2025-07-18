@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NS Empréstimos</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+<body>
+  <div class="container">
+    <div class="left">
+      <h1>NS Empréstimos</h1>
+      <form id="simuladorForm">
+        <div class="etapa" id="etapa1">
+          <label for="valor">Quanto você precisa?</label>
+          <input type="number" id="valor" name="valor" required />
+          <button type="button" onclick="proximaEtapa(2)">Próximo</button>
+        </div>
+        <div class="etapa" id="etapa2" style="display:none;">
+          <label for="finalidade">Finalidade do Empréstimo</label>
+          <select id="finalidade" required>
+            <option value="">Selecione</option>
+            <option>Conta em atraso</option>
+            <option>Cartão de crédito</option>
+            <option>Viagem</option>
+          </select>
+          <button type="button" onclick="proximaEtapa(3)">Próximo</button>
+        </div>
+        <div class="etapa" id="etapa3" style="display:none;">
+          <label for="nome">Seu nome completo</label>
+          <input type="text" id="nome" required />
+          <label for="email">E-mail</label>
+          <input type="email" id="email" required />
+          <label for="telefone">Telefone</label>
+          <input type="tel" id="telefone" required />
+          <button type="submit">Finalizar</button>
+        </div>
+        <div class="etapa" id="final" style="display:none;">
+          <h2>Simulação enviada com sucesso!</h2>
+          <p>Entraremos em contato com você em breve.</p>
+        </div>
+      </form>
+    </div>
+    <div class="right">
+      <h2>Simule seu empréstimo 100% online</h2>
+      <p>Compare ofertas de crédito de forma rápida, segura e sem burocracia.</p>
+    </div>
+  </div>
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
