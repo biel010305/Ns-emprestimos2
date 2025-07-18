@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contato - NS Empréstimos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="logo.png" alt="Logo NS Empréstimos" class="logo">
+    <h1>NS Empréstimos</h1>
+    <nav>
+      <a href="index.html">Simulador</a>
+      <a href="contato.html">Contato</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contato">
+      <h2>Fale Conosco</h2>
+      <form id="formContato">
+        <label>Nome:</label>
+        <input type="text" required>
+        <label>Email:</label>
+        <input type="email" required>
+        <label>Telefone:</label>
+        <input type="tel" required>
+        <label>Mensagem:</label>
+        <textarea required></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+      <div id="contatoStatus"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© NS Empréstimos - Todos os direitos reservados.</p>
+  </footer>
+  <script>
+    document.getElementById("formContato").onsubmit = function(e) {
+      e.preventDefault();
+      document.getElementById("contatoStatus").innerText = "Mensagem enviada com sucesso!";
+    }
+  </script>
+</body>
+</html>

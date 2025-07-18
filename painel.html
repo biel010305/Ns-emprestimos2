@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel do Cliente</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="painel">
+    <h2>Painel do Cliente</h2>
+    <p>Bem-vindo ao seu painel. Aqui você verá suas simulações em breve.</p>
+    <button onclick="logout()">Sair</button>
+  </main>
+  <script>
+    if(localStorage.getItem("logado") !== "sim") {
+      window.location.href = "login.html";
+    }
+    function logout() {
+      localStorage.removeItem("logado");
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>
